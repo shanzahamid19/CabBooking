@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickRide - Cab Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ✅ Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">QuickRide</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#cabNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="cabNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
+        <li class="nav-item"><a class="nav-link" href="#rides">Rides</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ✅ Hero Section -->
+<header class="text-center text-white" style="background-image: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center;">
+  <div class="bg-dark bg-opacity-50 py-5">
+    <div class="container py-5">
+      <h1 class="fw-bold">Book Your Ride in Seconds</h1>
+      <p class="lead">Fast, Safe, and Reliable Cab Service 24/7</p>
+      <button class="btn btn-warning" data-bs-toggle="offcanvas" data-bs-target="#rideForm">Book a Cab</button>
+    </div>
+  </div>
+</header>
+
+<!-- ✅ Ride Types -->
+<!-- ✅ Ride Types -->
+<section id="rides" class="container my-5">
+  <h2 class="text-center text-danger mb-4">Choose Your Ride</h2>
+  <div class="row g-4">
+    
+    <!-- Economy -->
+    <div class="col-md-4">
+      <div class="card shadow text-center h-100">
+        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="Economy Car" style="height: 230px; object-fit: cover;"
+        >
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <h5 class="card-title">Economy</h5>
+            <p class="card-text">Affordable and comfortable rides for everyday travel.</p>
+          </div>
+          <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#bookNow">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium -->
+    <div class="col-md-4">
+      <div class="card shadow text-center h-100">
+        <img src="https://plus.unsplash.com/premium_photo-1737559694560-1227c63d0885?auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="Premium Cab" style="height: 230px; object-fit: cover;"
+        >
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <h5 class="card-title">Premium</h5>
+            <p class="card-text">Luxury rides with top-tier comfort and professional drivers.</p>
+          </div>
+          <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#bookNow">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ SUV (New Option) -->
+    <div class="col-md-4">
+      <div class="card shadow text-center h-100">
+        <img src="https://images.unsplash.com/photo-1604395924490-a3a18bb7193e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI3fHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=500" class="card-img-top" alt="SUV" style="height: 230px; object-fit: cover;">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <h5 class="card-title">SUV</h5>
+            <p class="card-text">Spacious and powerful — ideal for long trips or extra luggage.</p>
+          </div>
+          <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#bookNow">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ✅ Testimonials Carousel -->
+<section id="reviews" class="container my-5">
+  <h2 class="text-center text-success mb-3">What Our Riders Say</h2>
+
+  <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <!-- 🔘 Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- 💬 Carousel Items -->
+    <div class="carousel-inner rounded shadow">
+      <div class="carousel-item active text-center p-5 bg-light">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Ayesha">
+        <p class="fs-5">"QuickRide is always on time and reliable!"</p>
+        <small class="text-muted">– Ayesha, Karachi</small>
+      </div>
+
+      <div class="carousel-item text-center p-5 bg-light">
+        <img src="https://randomuser.me/api/portraits/men/30.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Ali">
+        <p class="fs-5">"Best cab service with friendly drivers."</p>
+        <small class="text-muted">– Ali, Lahore</small>
+      </div>
+
+      <div class="carousel-item text-center p-5 bg-light">
+        <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Fatima">
+        <p class="fs-5">"Affordable and easy to use booking system!"</p>
+        <small class="text-muted">– Fatima, Islamabad</small>
+      </div>
+    </div>
+
+    <!-- ⬅️➡️ Navigation Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+
+<!-- ✅ Offcanvas Booking Form -->
+<div class="offcanvas offcanvas-end" id="rideForm">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Book Your Cab</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <form>
+      <input type="text" class="form-control mb-3" placeholder="Pickup Location">
+      <input type="text" class="form-control mb-3" placeholder="Drop Location">
+      <input type="datetime-local" class="form-control mb-3">
+      <button class="btn btn-success w-100">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+<!-- ✅ Booking Modal -->
+<div class="modal fade" id="bookNow">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Booking Confirmed!</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Your cab has been booked successfully. Thank you for choosing QuickRide!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Contact Section -->
+<section id="contact" class="container my-5">
+  <h2 class="text-center text-primary mb-4">Contact Us</h2>
+  <form class="bg-light p-4 rounded shadow">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" placeholder="Your name">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" placeholder="Your email">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Message</label>
+      <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
+    </div>
+    <button class="btn btn-primary">Send Message</button>
+  </form>
+</section>
+
+<!-- ✅ Footer -->
+<footer class="bg-primary text-white text-center p-3 mt-5">
+  © 2025 QuickRide | Powered by Bootstrap
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
